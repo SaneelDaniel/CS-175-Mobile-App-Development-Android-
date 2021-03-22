@@ -1,0 +1,3 @@
+include ':shakesensordemo'
+include ':WeatherDemo'
+rootProject.name = "SensorDemo"

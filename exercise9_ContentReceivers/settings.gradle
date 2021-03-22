@@ -1,0 +1,4 @@
+include ':phone'
+include ':phonereceiver'
+include ':app'
+rootProject.name = "exercise9"

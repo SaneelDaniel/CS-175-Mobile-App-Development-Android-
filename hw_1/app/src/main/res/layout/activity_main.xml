@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/main_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/amtBorrowed_textView"
+        android:layout_width="229dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/amtBorrowed_textView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/amtBorrowed_editText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_view"
+        app:layout_constraintTop_toTopOf="@+id/main_view" />
+
+    <EditText
+        android:id="@+id/amtBorrowed_editText"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+
+        android:hint="Amount"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/main_view"
+        app:layout_constraintTop_toTopOf="@+id/main_view" />
+
+    <TextView
+        android:id="@+id/interestRate_textView"
+        android:layout_width="188dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/interestRate_textView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/interestRate_seekBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/amtBorrowed_textView" />
+
+    <SeekBar
+        android:id="@+id/interestRate_seekBar"
+        android:layout_width="152dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:max="20"
+        android:progress="10"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="vertical"
+        android:secondaryProgress="10"
+        app:layout_constraintEnd_toEndOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/amtBorrowed_editText" />
+
+    <RadioGroup
+        android:id="@+id/loanTerm_radioGroup"
+        android:layout_width="378dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loanTerm_textView">
+
+        <RadioButton
+            android:id="@+id/loanTerm15_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loanTerm15"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/loanTerm20_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 Years"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/loanTerm30_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Years" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/loanTerm_textView"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="337dp"
+        android:text="Select The Loan Term"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/main_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/interestRate_textView" />
+
+    <CheckBox
+        android:id="@+id/loansAndTaxes_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text="Included"
+        app:layout_constraintEnd_toEndOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/loanTerm_radioGroup" />
+
+    <TextView
+        android:id="@+id/taxesCheck_textView"
+        android:layout_width="240sp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="Please Check If Taxes And Insurance are Included"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/loansAndTaxes_checkBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/loanTerm_radioGroup" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/calculateButton"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/main_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/taxesCheck_textView" />
+
+    <TextView
+        android:id="@+id/mortgageOutput_textView"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="176dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/main_view"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="@+id/main_view"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

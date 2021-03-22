@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ShakeSensorDemo</string>
+    <string name="shake_to_get_a_toast_and_to_switch_color" tools:ignore="ExtraTranslation">SHAKE TO GET A TOAST AND TO SWITCH COLOR</string>
+</resources>

@@ -1,0 +1,2 @@
+include ':AccGame'
+rootProject.name = "Accelerometer"

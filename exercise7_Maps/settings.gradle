@@ -1,0 +1,3 @@
+include ':exercise7-2_googlemaps'
+include ':exrcise7-1_location'
+rootProject.name = "Location"

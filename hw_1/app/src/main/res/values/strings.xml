@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="amtBorrowed_textView">Enter The Amount Borrowed</string>
+    <string name="interestRate_textView">Interest Rate: 10.0%</string>
+    <string name="calculateButton">Calculate</string>
+    <string name="loanTerm15">15 Years</string>
+    <string name="loanTerm20">20 Years</string>
+    <string name="loanTerm30">30 Years</string>
+</resources>

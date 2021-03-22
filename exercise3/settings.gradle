@@ -1,0 +1,3 @@
+include ':recyclerlistview'
+include ':app'
+rootProject.name = "ListViewPrac"
